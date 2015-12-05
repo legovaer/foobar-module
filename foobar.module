@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains foobar.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function foobar_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the foobar module.
+    case 'help.page.foobar':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function foobar_theme() {
+  $theme = [];
+
+  return $theme;
+}
